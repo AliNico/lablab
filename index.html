@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mwehehe</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Elegant fonts for a cinematic, romantic feel -->
+</head>
+<body>
+    <!-- Ambient backgrounds: sparkles and floating petals -->
+    <div class="sparkles-container"></div>
+    <div class="petal-container"></div>
+
+    <!-- 1. Opening Screen -->
+    <header id="home" class="section fullscreen">
+        <div class="hero-content">
+            <h1 class="fade-in-text">Happy 3rd Monthsary Lablab!</h1>
+            <p class="subtitle fade-in-text delay-1">from nico lablab^3^</p>
+            <button class="glow-btn fade-in-text delay-2" onclick="scrollToSection('letter')">Open Letter</button>
+        </div>
+    </header>
+
+    <!-- 2. Love Letter Section -->
+    <section id="letter" class="section">
+        <div class="envelope-container reveal">
+            <div class="envelope">
+                <div class="paper">
+                    <!-- The text here is injected by JavaScript for a typing effect -->
+                    <p id="typewriter-text"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Memories Gallery -->
+    <section id="memories" class="section">
+        <h2 class="reveal">Our Memories</h2>
+        <div class="gallery-grid">
+            <!-- Picture 1 -->
+            <div class="polaroid reveal" onclick="openModal('pics/img1.jpeg', 'promise to hold each other’s hands, i love you lablab')">
+                <img src="pics/img1.jpeg" alt="Memory 1">
+                <div class="caption">02/18/26 - lablab said YESSSS!!! ehe</div>
+            </div>
+            
+            <!-- Picture 2 -->
+            <div class="polaroid reveal delay-1" onclick="openModal('pics/img2.jpeg', 'sshheeeeesh, w/ my lablab sa sikrit sb spot sa makatsz frfr')">
+                <img src="pics/img2.jpeg" alt="Memory 2">
+                <div class="caption">03/17/26 - Our First Monthsary date :3</div>
+            </div>
+
+            <!-- Picture 3 -->
+            <div class="polaroid reveal delay-2" onclick="openModal('pics/img3.jpeg', 'NAKUHA NRIN NI LABLAB LITL BABIES NYAAA!! ACCKKKK me was s hapi here fr my lablab hehehheh')">
+                <img src="pics/img3.jpeg" alt="Memory 3">
+                <div class="caption">04/23/26 - mikmik and chuchu aka oink oink aka dos</div>
+            </div>
+
+            <!-- Picture 4 -->
+            <div class="polaroid reveal delay-3" onclick="openModal('pics/img4.jpeg', 'hapi pamilee day, meet da fam, kas tutol ata si tito NAYAHHAHAHAH')">
+                <img src="pics/img4.jpeg" alt="Memory 4">
+                <div class="caption">05/05/26 - habadu tito, w/ lablab ft. arcade gala</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal for Gallery Clicks -->
+    <div id="lightbox" class="modal" onclick="closeModal()">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modal-img">
+        <div id="modal-caption"></div>
+    </div>
+
+    <!-- 4. Reasons I Love You -->
+    <section id="reasons" class="section">
+        <h2 class="reveal">Reazonz I Love My Lablab</h2>
+        <div class="reasons-container reveal">
+            <!-- EDIT REASONS: Change the text inside the single quotes in the onclick function -->
+            <button class="reason-btn" onclick="showReason(this, 'her smile. YIIIEEEEEE')">Reazon 1 </button>
+            <button class="reason-btn" onclick="showReason(this, 'amoy ng kilikili ugh')">Reazon 2 </button>
+            <button class="reason-btn" onclick="showReason(this, 'zeriouly na, the care and thought you give to me and others, makes me fall inlove w/ you more')">Reason 3 </button>
+        </div>
+    </section>
+
+    <!-- 5. Music Section -->
+    <section id="music" class="section reveal">
+        <div class="music-player glassmorphism">
+            <div class="vinyl" id="vinyl-disc">
+                <div class="vinyl-center"></div>
+            </div>
+            <div class="song-info">
+                <!-- EDIT SONG INFO HERE -->
+                <h3>pag bigyan ko muna si Jaehyun dito</h3>
+                <p>de wala de wala</p> 
+            </div>
+            <div class="controls">
+                <!-- REPLACE AUDIO FILE: Change src to your music file (e.g., 'audio/our-song.mp3') -->
+                <audio id="bg-music" src="jaehyun.mp3"></audio>
+                <button id="play-pause-btn" class="glow-btn" onclick="toggleMusic()">Play</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Final Message Section -->
+    <section id="final" class="section fullscreen">
+        <div class="final-content reveal">
+            <h2>I love you always my lablab</h2>
+            <p>Thank you for being my everything now and then.</p>
+            <button class="glow-btn big-btn" onclick="triggerBloom()">hapi motmot lab ^3^</button>
+        </div>
+        <!-- Soft bloom animation overlay triggers here -->
+        <div id="bloom-overlay"></div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
